@@ -370,12 +370,16 @@ body {
   text-align: center;
   width: 100%; }
 
+@media screen and (max-height: 500px) {
+  .navigation__list {
+    top: 45%; } }
+
 .navigation__item {
   margin: 1rem; }
 
 .navigation__link {
   font-size: 3.5rem;
-  padding: 1rem 1rem; }
+  padding: 0.5rem 1rem; }
 
 @media screen and (max-height: 500px) {
   .navigation__link {
