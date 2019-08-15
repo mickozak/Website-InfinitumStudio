@@ -363,7 +363,7 @@ body {
 
 .navigation__list {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
@@ -373,11 +373,18 @@ body {
 .navigation__item {
   margin: 1rem; }
 
+.navigation__link {
+  font-size: 3.5rem;
+  padding: 1rem 1rem; }
+
+@media screen and (max-height: 500px) {
+  .navigation__link {
+    font-size: 2rem;
+    padding: 0.25rem 1rem; } }
+
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
-  font-size: 3rem;
   font-weight: 300;
-  padding: 1rem 2rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
