@@ -1,0 +1,124 @@
+.header {
+    &__bg{
+    height: 85vh;
+    background-blend-mode: luminosity;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.3),
+        rgba($color-primary-dark, 0.3)),
+    url(../img/slider/slider.webp);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        height: 95vh;
+    }
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+            only screen and (min-width: 125em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.3),
+            rgba($color-primary-dark, 0.3)),
+        url(../img/slider/slider.webp);
+    }
+
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+}
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__container--left{
+        display: flex;
+        align-items: center
+    }
+
+    &__logo {
+        height: 10rem;
+    }
+
+    &__navigation{
+        display: flex;
+        z-index: 1000;
+    }
+
+    &__navigation-item{
+        padding-left: 2rem;
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+        font-weight: 300;
+        list-style: none;
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+    }
+
+    &__navigation-link{
+        color: $color-grey-dark-3;
+        text-decoration: none;
+    }
+
+    &__navigation-link:hover{
+        color: $color-primary;
+    }
+
+    &__navigation--level{
+        display: none;
+    }
+
+    &__navigation-item:hover > &__navigation--level{
+        display: block;
+        position: absolute;
+        z-index: 1000;
+    }
+
+    &__navigation-item--level{
+        padding: 0.4rem;
+        background: rgba($color-grey-light-1, 0.5);
+        margin: 0.4rem;
+        border-radius: 3px;
+        font-weight: 300;
+        font-size: 1.8rem;
+    }
+
+    &__navigation-link--level{
+        color: $color-grey-dark-3;
+        text-decoration: none;
+    }
+
+    &__navigation-link--level:hover{
+        color: $color-primary;
+    }
+
+    &__social-box{
+        display: flex;
+        margin-top: 0.5rem; 
+    }
+
+    &__social-box:last-child{
+       margin-right: 1rem;
+    }
+
+    &__social-icon{
+        width: 2rem;
+        margin-left: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .header__navigation-box{
+        display: none;
+    }
+    .header__social-box{
+        display: none;
+    }
+}

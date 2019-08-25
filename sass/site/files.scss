@@ -1,0 +1,21 @@
+.files{
+    display: flex;
+    justify-content: center;
+    &__box{
+        margin: 2rem;
+        width: 70%;
+        @include respond(phone) {
+            margin: 2rem;
+            text-align: center;
+        }
+}
+
+&__box--files > li {
+    list-style: none;
+}
+
+&__box--files > li > a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}}

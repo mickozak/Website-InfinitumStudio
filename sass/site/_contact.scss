@@ -1,0 +1,76 @@
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    @include respond(phone) {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    }
+    &__left{
+        padding: 5rem 0;
+        grid-column: 1/2;
+        grid-row: auto;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        @include respond(phone) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            padding: 2.5rem 0;
+        }
+    }
+    &__map{
+        border: 0.3rem solid #58C1D3;
+        width: 45rem;
+        height: 35rem;
+        margin: 0 1rem 0 1rem;
+        @include respond(phone) {
+        width: 40rem;
+        height: 30rem;
+        }
+       
+    }
+    &__right{
+        padding: 5rem 0;
+        grid-column: 2/3;
+        grid-row: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        @include respond(phone) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            padding: 0 0 2.5rem 0;
+            position: inherit;
+        }
+    }
+    &__header{
+        font-size: 3rem;
+        @include respond(phone) {
+            text-align: center;
+        }
+    }
+    &__header > hr {
+        height: 3px;
+        color: $color-primary;
+        background-color: $color-primary;
+        border: none;
+    }
+    &__content{
+        font-size: 1.5rem;
+        margin-top: 1rem; 
+        @include respond(phone) {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .contact__map{
+        width: 50rem;
+        height: 40rem;  
+    }
+}

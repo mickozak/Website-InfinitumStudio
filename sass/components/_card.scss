@@ -1,0 +1,106 @@
+//NEWS CARD
+
+.card {
+    position: relative;
+    height: 58rem;
+
+    &__side {
+        height: 60rem;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-color: $color-news-one-bg;
+            }
+
+            &-2 {
+                background-color: $color-news-two-bg;
+            }
+
+            &-3 {
+                background-color: $color-news-three-bg;
+            }
+        }
+    }
+  
+    &__picture {
+        background-size: cover;
+        height: 36rem;
+        background-blend-mode: multiply;
+        -webkit-clip-path: polygon(100% 0, 100% 85%, 25% 100%, 0 100%, 0 0);
+        clip-path: polygon(100% 0, 100% 85%, 13% 100%, 0 100%, 0 0);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-news-one-light, $color-news-one-dark), 
+            url(../img/news/zapisy.webp);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-news-two-light, $color-news-two-dark), 
+            url(../img/news/bal.webp);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-news-three-light, $color-news-three-dark), 
+            url(../img/news/sala.webp);
+        }
+    }
+
+    &__details {
+        padding: 2rem;
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+        
+    }
+
+    //@include respond(tab-port) {
+    @media only screen and (max-width: 56.25em),
+            only screen and (hover: none) {
+
+        height: auto;
+        border-radius: 3px;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        
+        &__side {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                transform: rotateY(0);
+            }
+        }
+    
+        &__details {
+            font-size: 1.5rem;
+            padding: 5rem 2rem;
+        }
+
+        &__cta {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(0);
+            width: 100%;
+            padding: 0.5rem 3rem 0.5rem 4rem;
+        }
+    }
+}

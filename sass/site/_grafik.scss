@@ -1,0 +1,33 @@
+.image{
+    display: flex;
+    justify-content: center;
+    &__box{
+        margin: 2rem 0 2rem 0;
+        width: 80%;
+        @include respond(phone) {
+            margin: 0;
+        }
+    }
+    &__box > h1{
+        padding-left: 0.5rem;
+        margin: 2rem 0;
+        @include respond(phone) {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            padding-left: 0.25rem;
+        }
+    }
+
+    &__box > p{
+        padding-left: 0.5rem;
+        @include respond(phone) {
+            padding-left: 0.25rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__box--graphic{  
+        width: 100%;  
+    }
+}
+

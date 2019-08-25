@@ -568,3 +568,46 @@ body {
   .contact__map {
     width: 50rem;
     height: 40rem; } }
+
+.files {
+  display: flex;
+  justify-content: center; }
+  .files__box {
+    margin: 2rem;
+    width: 70%; }
+    @media only screen and (max-width: 37.5em) {
+      .files__box {
+        margin: 2rem;
+        text-align: center; } }
+  .files__box--files > li {
+    list-style: none; }
+  .files__box--files > li > a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black; }
+
+.image {
+  display: flex;
+  justify-content: center; }
+  .image__box {
+    margin: 2rem 0 2rem 0;
+    width: 80%; }
+    @media only screen and (max-width: 37.5em) {
+      .image__box {
+        margin: 0; } }
+  .image__box > h1 {
+    padding-left: 0.5rem;
+    margin: 2rem 0; }
+    @media only screen and (max-width: 37.5em) {
+      .image__box > h1 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        padding-left: 0.25rem; } }
+  .image__box > p {
+    padding-left: 0.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .image__box > p {
+        padding-left: 0.25rem;
+        margin-bottom: 1rem; } }
+  .image__box--graphic {
+    width: 100%; }
