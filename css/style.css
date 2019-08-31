@@ -414,6 +414,11 @@ body {
   background-position: 100%;
   color: #58C1D3;
   transform: translateX(1rem); }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__link:hover:hover, .navigation__link:active:hover {
+      background-position: 0;
+      color: white;
+      transform: translateX(0); } }
 
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80); }
@@ -721,14 +726,14 @@ body {
     align-items: center;
     border: 0.5rem solid #58C1D3;
     transition: all 0.5s; }
+    .o_nas__image:hover {
+      transform: scale(1.2); }
     @media only screen and (max-width: 56.25em) {
       .o_nas__image {
         grid-column: 2/4;
         grid-row: 1/2; }
         .o_nas__image:hover {
           transform: scale(1); } }
-    .o_nas__image:hover {
-      transform: scale(1.2); }
   .o_nas__image > img {
     width: 100%;
     padding: 0.5rem 0.5rem 0 0.5rem; }

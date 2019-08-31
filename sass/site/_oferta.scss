@@ -1,0 +1,54 @@
+.offer{
+    &__item{
+        display: grid;
+        grid-template-columns: 9vw 30vw 50vw 9vw;
+        grid-template-rows: auto;
+        margin-top: 3rem;
+        margin-bottom: 2rem; 
+    }
+    &__image{
+        grid-column: 2/3;
+        justify-self: center;
+        align-self: center;
+        align-items: center;
+        border: 0.5rem solid #58C1D3;
+        transition: all 0.5s;
+        &:hover{
+            transform: scale(1.2);
+        }
+        @include respond(tab-port) {
+            grid-column: 2/4;
+            grid-row: 1/2;
+            &:hover{
+                transform: scale(1);
+            }
+        }
+    }
+    &__color{
+        border: 0.5rem solid #FFE9F4;
+    }
+    &__image > img {
+        width: 100%;
+        padding: 0.5rem 0.5rem 0 0.5rem;
+    }
+    &__text{
+        grid-column: 3/4;
+        margin: 2rem 2rem 2rem 2rem;
+        @include respond(tab-port) {
+            grid-column: 2/4;
+            grid-row: 2/3;
+        }   
+        &--header{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            @include respond(phone) {
+                text-align: center;
+            }
+        }
+        &--content{
+            text-align: justify;
+            font-size: 1.5rem;
+        }
+    }
+}

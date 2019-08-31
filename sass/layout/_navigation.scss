@@ -115,6 +115,13 @@
             background-position: 100%;
             color: $color-primary;
             transform: translateX(1rem);
+            @include respond(tab-port) {
+                &:hover{
+                    background-position: 0;
+                    color: white;
+                    transform: translateX(0);
+                }
+        }
         }
     }
 

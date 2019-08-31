@@ -1,12 +1,7 @@
 .header {
     &__bg{
     height: 85vh;
-    background-blend-mode: luminosity;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.3),
-        rgba($color-primary-dark, 0.3)),
-    url(../img/slider/slider.webp);
+    background-image: url(../img/slider/slider.webp);
     background-size: cover;
     background-position: top;
     position: relative;
@@ -20,11 +15,7 @@
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
             only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
             only screen and (min-width: 125em) {
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-primary-light, 0.3),
-            rgba($color-primary-dark, 0.3)),
-        url(../img/slider/slider.webp);
+                background-image: url(../img/slider/slider.webp);
     }
 
     @include respond(phone) {
@@ -50,6 +41,7 @@
     &__navigation{
         display: flex;
         z-index: 1000;
+        
     }
 
     &__navigation-item{
