@@ -149,7 +149,7 @@ body {
 .footer {
   display: flex;
   justify-content: flex-end;
-  background-color: #333;
+  background-color: #debdc9;
   -webkit-clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
   padding: 6rem 0 4rem 0;
@@ -165,7 +165,7 @@ body {
       .footer__box {
         margin-right: 0; } }
   .footer__header > hr {
-    width: 60%;
+    width: 70%;
     height: 1px;
     color: #58C1D3;
     background-color: #58C1D3;
@@ -174,9 +174,11 @@ body {
       .footer__header > hr {
         margin: 0 auto; } }
   .footer__header > h2 {
-    font-weight: 100; }
+    font-weight: 100;
+    color: black; }
   .footer__content {
-    margin-top: 0.2rem; }
+    margin-top: 0.2rem;
+    color: black; }
 
 .author {
   display: flex;
@@ -259,7 +261,8 @@ body {
   align-items: center; }
 
 .header__logo {
-  height: 10rem; }
+  height: 10rem;
+  filter: contrast(2); }
 
 .header__navigation {
   display: flex;
@@ -587,8 +590,6 @@ body {
         text-align: center; } }
     .files__box > p {
       font-size: 2rem; }
-    .files__box--files > li {
-      list-style: none; }
     .files__box--files > li > a {
       font-size: 1.5rem;
       text-decoration: none;
@@ -645,6 +646,9 @@ body {
       .instruktorzy__image:hover {
         transform: scale(1); } }
 
+.instruktorzy__color {
+  border: 0.5rem solid #debdc9; }
+
 .instruktorzy__image > img {
   width: 100%;
   padding: 0.5rem 0.5rem 0 0.5rem; }
@@ -681,7 +685,7 @@ body {
   border: 0.5rem solid #58C1D3;
   transition: all 0.5s; }
   .offer__image:hover {
-    transform: scale(1.2); }
+    transform: scale(1.1); }
   @media only screen and (max-width: 56.25em) {
     .offer__image {
       grid-column: 2/4;
@@ -690,7 +694,7 @@ body {
         transform: scale(1); } }
 
 .offer__color {
-  border: 0.5rem solid #FFE9F4; }
+  border: 0.5rem solid #debdc9; }
 
 .offer__image > img {
   width: 100%;
@@ -727,7 +731,7 @@ body {
     border: 0.5rem solid #58C1D3;
     transition: all 0.5s; }
     .o_nas__image:hover {
-      transform: scale(1.2); }
+      transform: scale(1.1); }
     @media only screen and (max-width: 56.25em) {
       .o_nas__image {
         grid-column: 2/4;
